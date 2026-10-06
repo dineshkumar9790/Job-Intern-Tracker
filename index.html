@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta
+        name="description"
+        content="CAREERX — Your modern career command center for jobs, internships and career opportunities."
+    >
+
     <title>CAREERX — Career Command Center</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -18,15 +26,18 @@
 <body>
 
 <!-- =========================================================
-     BACKGROUND EFFECTS
+     BACKGROUND
 ========================================================= -->
 
-<div class="background">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
+<div class="background" aria-hidden="true">
 
-    <div class="grid"></div>
+    <div class="background-grid"></div>
+
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-violet"></div>
+    <div class="orb orb-lime"></div>
+
+    <div class="noise"></div>
 
     <div class="particles">
         <span></span>
@@ -42,6 +53,7 @@
         <span></span>
         <span></span>
     </div>
+
 </div>
 
 
@@ -51,35 +63,61 @@
 
 <header class="navbar">
 
-    <a href="#home" class="logo">
-        <span class="logo-mark">
-            <span></span>
-        </span>
+    <div class="container nav-inner">
 
-        <div>
-            <strong>CAREER<span>X</span></strong>
-            <small>CAREER COMMAND CENTER</small>
-        </div>
-    </a>
+        <a href="#home" class="logo">
 
-    <nav class="nav-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#jobs">Jobs</a>
-        <a href="#internships">Internships</a>
-        <a href="#tracker">Tracker</a>
-        <a href="#analytics">Analytics</a>
-        <a href="#about">About</a>
-    </nav>
+            <span class="logo-mark">
+                <span></span>
+            </span>
 
-    <div class="nav-actions">
-        <button class="icon-btn">⌕</button>
-        <button class="icon-btn notification">◉</button>
+            <span class="logo-text">
+                <strong>CAREER<span>X</span></strong>
+                <small>CAREER COMMAND CENTER</small>
+            </span>
 
-        <a href="#login" class="login-link">Login</a>
-
-        <a href="#tracker" class="btn btn-primary">
-            + Add Application
         </a>
+
+
+        <nav class="nav-links" aria-label="Primary navigation">
+
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#jobs">Jobs</a>
+            <a href="#internships">Internships</a>
+            <a href="#analytics">Analytics</a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" aria-label="Search">
+                ⌕
+            </button>
+
+            <button class="icon-btn notification" aria-label="Notifications">
+                ◉
+            </button>
+
+            <a href="#login" class="login-link">
+                Login
+            </a>
+
+            <a href="#jobs" class="btn btn-primary nav-cta">
+                Explore Jobs
+                <span>↗</span>
+            </a>
+
+            <button class="mobile-menu" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
     </div>
 
 </header>
@@ -88,922 +126,243 @@
 <main>
 
 <!-- =========================================================
-     HOME / HERO
+     HERO
 ========================================================= -->
 
 <section id="home" class="hero section">
 
-    <div class="hero-content">
+    <div class="container hero-grid">
 
-        <div class="eyebrow">
-            <span class="live-dot"></span>
-            YOUR CAREER COMMAND CENTER
-        </div>
+        <div class="hero-content">
 
-        <h1>
-            Turn Applications
-            Into <span>Opportunities.</span>
-        </h1>
-
-        <p>
-            Track jobs, internships, interviews and offers
-            in one intelligent career workspace.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#jobs" class="btn btn-primary">
-                Explore Opportunities →
-            </a>
-
-            <a href="#tracker" class="btn btn-outline">
-                Open Tracker
-            </a>
-        </div>
-
-        <div class="hero-stats">
-
-            <div>
-                <strong>500+</strong>
-                <span>Applications</span>
+            <div class="eyebrow">
+                <span class="live-dot"></span>
+                YOUR CAREER COMMAND CENTER
             </div>
 
-            <div>
-                <strong>92%</strong>
-                <span>Organized</span>
+
+            <h1>
+                Turn
+                <span class="gradient-text">Applications</span>
+                Into
+                <span class="gradient-text">Opportunities.</span>
+            </h1>
+
+
+            <p class="hero-description">
+                Discover jobs, internships and career opportunities
+                while keeping your entire career journey organized
+                in one intelligent workspace.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#jobs" class="btn btn-primary btn-large">
+                    Explore Opportunities
+                    <span>→</span>
+                </a>
+
+                <a href="#features" class="btn btn-glass btn-large">
+                    Explore Platform
+                    <span>↗</span>
+                </a>
+
             </div>
 
-            <div>
-                <strong>24/7</strong>
-                <span>Visibility</span>
-            </div>
 
-        </div>
+            <div class="hero-trust">
 
-    </div>
-
-
-    <!-- HERO DASHBOARD -->
-
-    <div class="hero-dashboard">
-
-        <div class="dashboard-window">
-
-            <div class="window-top">
-                <div class="window-dots">
-                    <i></i>
-                    <i></i>
-                    <i></i>
+                <div class="avatar-stack">
+                    <span>AK</span>
+                    <span>RM</span>
+                    <span>JS</span>
+                    <span>+</span>
                 </div>
 
-                <span>CAREERX / DASHBOARD</span>
-
-                <span class="secure">● LIVE</span>
-            </div>
-
-
-            <div class="mini-dashboard">
-
-                <div class="mini-header">
-                    <div>
-                        <small>WELCOME BACK</small>
-                        <h3>Career Overview</h3>
-                    </div>
-
-                    <div class="profile-circle">DK</div>
-                </div>
-
-
-                <div class="mini-stats">
-
-                    <div>
-                        <small>APPLICATIONS</small>
-                        <strong>126</strong>
-                        <span class="positive">↑ 18%</span>
-                    </div>
-
-                    <div>
-                        <small>INTERVIEWS</small>
-                        <strong>38</strong>
-                        <span class="positive">↑ 12%</span>
-                    </div>
-
-                    <div>
-                        <small>OFFERS</small>
-                        <strong>04</strong>
-                        <span class="positive">↑ 8%</span>
-                    </div>
-
-                </div>
-
-
-                <div class="application-card">
-
-                    <div class="company-logo google">
-                        G
-                    </div>
-
-                    <div class="application-info">
-                        <strong>Software Engineer Intern</strong>
-                        <span>Google · Bangalore · Hybrid</span>
-                    </div>
-
-                    <div class="status interview">
-                        Interview
-                    </div>
-
-                    <div class="progress">
-                        <span style="width:78%"></span>
-                    </div>
-
-                </div>
-
-
-                <div class="dashboard-chart">
-
-                    <div class="chart-title">
-                        <span>Application Activity</span>
-                        <strong>+24.8%</strong>
-                    </div>
-
-                    <div class="bars">
-                        <i style="height:35%"></i>
-                        <i style="height:50%"></i>
-                        <i style="height:42%"></i>
-                        <i style="height:68%"></i>
-                        <i style="height:58%"></i>
-                        <i style="height:85%"></i>
-                        <i style="height:72%"></i>
-                        <i style="height:95%"></i>
-                        <i style="height:82%"></i>
-                        <i style="height:100%"></i>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="floating-card float-one">
-            <span class="float-icon">✦</span>
-            <div>
-                <strong>3 Interviews</strong>
-                <small>This Week</small>
-            </div>
-        </div>
-
-
-        <div class="floating-card float-two">
-            <span class="float-icon green">✓</span>
-            <div>
-                <strong>87%</strong>
-                <small>Career Score</small>
-            </div>
-        </div>
-
-
-        <div class="floating-card float-three">
-            <span class="float-icon purple">↗</span>
-            <div>
-                <strong>+18.4%</strong>
-                <small>Momentum</small>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     STATISTICS
-========================================================= -->
-
-<section class="stats-section">
-
-    <div class="stat-card">
-        <span>01</span>
-        <strong>126</strong>
-        <p>Applications</p>
-        <small>Tracked opportunities</small>
-    </div>
-
-    <div class="stat-card">
-        <span>02</span>
-        <strong>38</strong>
-        <p>Interviews</p>
-        <small>Interview opportunities</small>
-    </div>
-
-    <div class="stat-card">
-        <span>03</span>
-        <strong>12</strong>
-        <p>Shortlisted</p>
-        <small>Active opportunities</small>
-    </div>
-
-    <div class="stat-card highlight">
-        <span>04</span>
-        <strong>04</strong>
-        <p>Offers</p>
-        <small>Career wins</small>
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     JOBS
-========================================================= -->
-
-<section id="jobs" class="section">
-
-    <div class="section-heading">
-
-        <div>
-            <span class="section-label">01 / OPPORTUNITIES</span>
-
-            <h2>
-                Find Your Next
-                <span>Opportunity.</span>
-            </h2>
-
-            <p>
-                Discover jobs that match your skills,
-                goals and career ambitions.
-            </p>
-        </div>
-
-        <a href="#" class="text-link">
-            View All Jobs →
-        </a>
-
-    </div>
-
-
-    <div class="search-panel">
-
-        <div class="search-box">
-            <span>⌕</span>
-            <input
-                type="text"
-                placeholder="Search jobs, roles or companies..."
-            >
-        </div>
-
-        <button>Location⌄</button>
-        <button>Experience⌄</button>
-        <button>Work Mode⌄</button>
-
-    </div>
-
-
-    <div class="chips">
-        <span class="chip active">All Jobs</span>
-        <span class="chip">Remote</span>
-        <span class="chip">Hybrid</span>
-        <span class="chip">Full-time</span>
-        <span class="chip">Freshers</span>
-        <span class="chip">Software</span>
-        <span class="chip">Java</span>
-        <span class="chip">Python</span>
-    </div>
-
-
-    <div class="job-grid">
-
-        <article class="job-card">
-
-            <div class="job-top">
-
-                <div class="company-logo google">G</div>
-
-                <span class="save">♡</span>
-
-            </div>
-
-            <span class="job-type">FULL-TIME</span>
-
-            <h3>Software Engineer</h3>
-
-            <p class="company-name">Google</p>
-
-            <div class="job-meta">
-                <span>⌖ Bangalore</span>
-                <span>◈ Hybrid</span>
-            </div>
-
-            <div class="salary">
-                ₹8–14 LPA
-            </div>
-
-            <div class="job-bottom">
-                <small>Posted 2 days ago</small>
-                <a href="#">View Job →</a>
-            </div>
-
-        </article>
-
-
-        <article class="job-card">
-
-            <div class="job-top">
-
-                <div class="company-logo microsoft">M</div>
-
-                <span class="save">♡</span>
-
-            </div>
-
-            <span class="job-type purple-text">FULL-TIME</span>
-
-            <h3>Frontend Developer</h3>
-
-            <p class="company-name">Microsoft</p>
-
-            <div class="job-meta">
-                <span>⌖ Hyderabad</span>
-                <span>◈ Remote</span>
-            </div>
-
-            <div class="salary">
-                ₹10–18 LPA
-            </div>
-
-            <div class="job-bottom">
-                <small>Posted 1 day ago</small>
-                <a href="#">View Job →</a>
-            </div>
-
-        </article>
-
-
-        <article class="job-card">
-
-            <div class="job-top">
-
-                <div class="company-logo zoho">Z</div>
-
-                <span class="save">♡</span>
-
-            </div>
-
-            <span class="job-type green-text">FULL-TIME</span>
-
-            <h3>Java Developer</h3>
-
-            <p class="company-name">Zoho</p>
-
-            <div class="job-meta">
-                <span>⌖ Chennai</span>
-                <span>◈ On-site</span>
-            </div>
-
-            <div class="salary">
-                ₹5–9 LPA
-            </div>
-
-            <div class="job-bottom">
-                <small>Posted 3 days ago</small>
-                <a href="#">View Job →</a>
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     INTERNSHIPS
-========================================================= -->
-
-<section id="internships" class="section dark-section">
-
-    <div class="section-heading">
-
-        <div>
-            <span class="section-label">02 / INTERNSHIPS</span>
-
-            <h2>
-                Launch Your Career
-                <span>With Experience.</span>
-            </h2>
-
-            <p>
-                Discover internships that turn learning
-                into real-world experience.
-            </p>
-        </div>
-
-    </div>
-
-
-    <div class="internship-grid">
-
-        <article class="internship-card featured">
-
-            <div class="internship-number">01</div>
-
-            <div class="company-logo">TN</div>
-
-            <span>6 MONTHS · HYBRID</span>
-
-            <h3>Java Full Stack Intern</h3>
-
-            <p>TechNova Solutions</p>
-
-            <div class="skills">
-                <span>Java</span>
-                <span>Spring Boot</span>
-                <span>MySQL</span>
-            </div>
-
-            <div class="internship-footer">
-                <strong>₹15K / Month</strong>
-                <a href="#">Apply Now →</a>
-            </div>
-
-        </article>
-
-
-        <article class="internship-card">
-
-            <div class="internship-number">02</div>
-
-            <div class="company-logo purple-bg">AI</div>
-
-            <span>3 MONTHS · REMOTE</span>
-
-            <h3>AI / ML Intern</h3>
-
-            <p>DataMind Labs</p>
-
-            <div class="skills">
-                <span>Python</span>
-                <span>Machine Learning</span>
-                <span>SQL</span>
-            </div>
-
-            <div class="internship-footer">
-                <strong>₹20K / Month</strong>
-                <a href="#">Apply Now →</a>
-            </div>
-
-        </article>
-
-
-        <article class="internship-card">
-
-            <div class="internship-number">03</div>
-
-            <div class="company-logo green-bg">FX</div>
-
-            <span>6 MONTHS · ON-SITE</span>
-
-            <h3>Frontend Developer Intern</h3>
-
-            <p>FutureX Technologies</p>
-
-            <div class="skills">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-            </div>
-
-            <div class="internship-footer">
-                <strong>₹12K / Month</strong>
-                <a href="#">Apply Now →</a>
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     FEATURES
-========================================================= -->
-
-<section class="section">
-
-    <div class="section-heading centered">
-
-        <span class="section-label">03 / PLATFORM</span>
-
-        <h2>
-            Everything Your
-            <span>Career Needs.</span>
-        </h2>
-
-        <p>
-            One powerful workspace for managing
-            your entire career journey.
-        </p>
-
-    </div>
-
-
-    <div class="feature-grid">
-
-        <article class="feature-card large">
-            <span class="feature-number">01</span>
-            <div class="feature-icon">◎</div>
-            <h3>Application Tracking</h3>
-            <p>
-                Track every job and internship
-                from application to offer.
-            </p>
-        </article>
-
-        <article class="feature-card">
-            <span class="feature-number">02</span>
-            <div class="feature-icon">◈</div>
-            <h3>Interview Timeline</h3>
-            <p>
-                Never lose track of your next interview.
-            </p>
-        </article>
-
-        <article class="feature-card">
-            <span class="feature-number">03</span>
-            <div class="feature-icon">↗</div>
-            <h3>Career Analytics</h3>
-            <p>
-                Understand your application performance.
-            </p>
-        </article>
-
-        <article class="feature-card">
-            <span class="feature-number">04</span>
-            <div class="feature-icon">◷</div>
-            <h3>Deadline Radar</h3>
-            <p>
-                Keep important opportunities visible.
-            </p>
-        </article>
-
-        <article class="feature-card large">
-            <span class="feature-number">05</span>
-            <div class="feature-icon">✦</div>
-            <h3>Career Insights</h3>
-            <p>
-                Discover patterns in your job search
-                and improve your strategy.
-            </p>
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     TRACKER
-========================================================= -->
-
-<section id="tracker" class="section dark-section">
-
-    <div class="section-heading">
-
-        <div>
-            <span class="section-label">04 / TRACKER</span>
-
-            <h2>
-                Your Career.
-                <span>One Command Center.</span>
-            </h2>
-        </div>
-
-        <div class="career-score-small">
-            <span>CAREER SCORE</span>
-            <strong>87<span>/100</span></strong>
-        </div>
-
-    </div>
-
-
-    <div class="pipeline">
-
-        <div class="pipeline-stage">
-            <span>01</span>
-            <strong>Saved</strong>
-            <b>24</b>
-        </div>
-
-        <div class="pipeline-line"></div>
-
-        <div class="pipeline-stage">
-            <span>02</span>
-            <strong>Applied</strong>
-            <b>126</b>
-        </div>
-
-        <div class="pipeline-line"></div>
-
-        <div class="pipeline-stage">
-            <span>03</span>
-            <strong>Screening</strong>
-            <b>42</b>
-        </div>
-
-        <div class="pipeline-line"></div>
-
-        <div class="pipeline-stage active">
-            <span>04</span>
-            <strong>Interview</strong>
-            <b>38</b>
-        </div>
-
-        <div class="pipeline-line"></div>
-
-        <div class="pipeline-stage">
-            <span>05</span>
-            <strong>Offer</strong>
-            <b>04</b>
-        </div>
-
-    </div>
-
-
-    <div class="tracker-grid">
-
-        <div class="tracker-panel">
-
-            <div class="panel-title">
-                <h3>Recent Applications</h3>
-                <a href="#">View All</a>
-            </div>
-
-            <div class="tracker-row">
-                <div class="company-logo google">G</div>
                 <div>
-                    <strong>Software Engineer Intern</strong>
-                    <small>Google · Applied Oct 02</small>
+                    <strong>10K+ career seekers</strong>
+                    <small>building their next opportunity</small>
                 </div>
-                <span class="status interview">Interview</span>
+
             </div>
 
-            <div class="tracker-row">
-                <div class="company-logo zoho">Z</div>
+
+            <div class="hero-stats">
+
+                <div class="hero-stat">
+                    <strong>50K<span>+</span></strong>
+                    <small>Opportunities</small>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>10K<span>+</span></strong>
+                    <small>Users</small>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>95<span>%</span></strong>
+                    <small>Satisfaction</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO VISUAL -->
+
+        <div class="hero-visual">
+
+            <div class="hero-glow"></div>
+
+            <div class="dashboard-window glass-card">
+
+                <div class="window-top">
+
+                    <div class="window-dots">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+
+                    <span>CAREERX / COMMAND CENTER</span>
+
+                    <span class="live-status">
+                        <i></i>
+                        LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-body">
+
+                    <div class="dashboard-header">
+
+                        <div>
+                            <small>WELCOME BACK</small>
+                            <h3>Career Overview</h3>
+                        </div>
+
+                        <div class="profile-circle">
+                            DK
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stats">
+
+                        <div class="dashboard-stat">
+                            <small>APPLICATIONS</small>
+                            <strong>126</strong>
+                            <span class="positive">↑ 18%</span>
+                        </div>
+
+                        <div class="dashboard-stat">
+                            <small>INTERVIEWS</small>
+                            <strong>38</strong>
+                            <span class="positive">↑ 12%</span>
+                        </div>
+
+                        <div class="dashboard-stat">
+                            <small>OFFERS</small>
+                            <strong>04</strong>
+                            <span class="positive">↑ 8%</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-application">
+
+                        <div class="company-logo google">
+                            G
+                        </div>
+
+                        <div class="application-info">
+                            <strong>Software Engineer Intern</strong>
+                            <span>Google · Bangalore · Hybrid</span>
+                        </div>
+
+                        <span class="status interview">
+                            Interview
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-chart">
+
+                        <div class="chart-heading">
+                            <div>
+                                <small>APPLICATION ACTIVITY</small>
+                                <strong>+24.8%</strong>
+                            </div>
+
+                            <span>Last 10 weeks</span>
+                        </div>
+
+                        <div class="bars">
+                            <i style="height:32%"></i>
+                            <i style="height:48%"></i>
+                            <i style="height:40%"></i>
+                            <i style="height:63%"></i>
+                            <i style="height:54%"></i>
+                            <i style="height:78%"></i>
+                            <i style="height:68%"></i>
+                            <i style="height:91%"></i>
+                            <i style="height:75%"></i>
+                            <i style="height:100%"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="floating-card float-one">
+
+                <span class="floating-icon">
+                    ✦
+                </span>
+
                 <div>
-                    <strong>Java Developer</strong>
-                    <small>Zoho · Applied Sep 29</small>
+                    <strong>3 Interviews</strong>
+                    <small>This Week</small>
                 </div>
-                <span class="status screening">Screening</span>
+
             </div>
 
-            <div class="tracker-row">
-                <div class="company-logo microsoft">M</div>
+
+            <div class="floating-card float-two">
+
+                <span class="floating-icon green">
+                    ✓
+                </span>
+
                 <div>
-                    <strong>Frontend Developer</strong>
-                    <small>Microsoft · Applied Sep 26</small>
+                    <strong>87%</strong>
+                    <small>Career Score</small>
                 </div>
-                <span class="status applied">Applied</span>
+
             </div>
 
-        </div>
 
+            <div class="floating-card float-three">
 
-        <div class="tracker-panel deadline-panel">
+                <span class="floating-icon violet">
+                    ↗
+                </span>
 
-            <div class="panel-title">
-                <h3>Deadline Radar</h3>
-                <span class="pulse-warning">● LIVE</span>
-            </div>
-
-            <div class="deadline">
                 <div>
-                    <strong>Google Internship</strong>
-                    <small>Software Engineering</small>
+                    <strong>+18.4%</strong>
+                    <small>Momentum</small>
                 </div>
-                <span>3 DAYS</span>
-            </div>
 
-            <div class="deadline">
-                <div>
-                    <strong>Microsoft Graduate Role</strong>
-                    <small>Frontend Engineering</small>
-                </div>
-                <span>9 DAYS</span>
-            </div>
-
-            <div class="deadline">
-                <div>
-                    <strong>StartupX</strong>
-                    <small>Full Stack Developer</small>
-                </div>
-                <span>13 DAYS</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     ANALYTICS
-========================================================= -->
-
-<section id="analytics" class="section">
-
-    <div class="section-heading">
-
-        <div>
-            <span class="section-label">05 / ANALYTICS</span>
-
-            <h2>
-                Understand Your
-                <span>Career Performance.</span>
-            </h2>
-        </div>
-
-    </div>
-
-
-    <div class="analytics-grid">
-
-        <div class="analytics-card">
-
-            <span>APPLICATION SUCCESS</span>
-
-            <strong>68%</strong>
-
-            <div class="progress-large">
-                <span style="width:68%"></span>
-            </div>
-
-            <small>↑ 12.4% compared to last month</small>
-
-        </div>
-
-
-        <div class="analytics-card">
-
-            <span>INTERVIEW RATE</span>
-
-            <strong>32%</strong>
-
-            <div class="progress-large purple">
-                <span style="width:32%"></span>
-            </div>
-
-            <small>↑ 8.2% compared to last month</small>
-
-        </div>
-
-
-        <div class="analytics-card">
-
-            <span>OFFER RATE</span>
-
-            <strong>12%</strong>
-
-            <div class="progress-large green">
-                <span style="width:12%"></span>
-            </div>
-
-            <small>↑ 4.8% compared to last month</small>
-
-        </div>
-
-
-        <div class="analytics-card chart-card">
-
-            <div class="chart-title">
-                <span>Monthly Applications</span>
-                <strong>+24.8%</strong>
-            </div>
-
-            <div class="large-bars">
-
-                <i style="height:30%"></i>
-                <i style="height:42%"></i>
-                <i style="height:35%"></i>
-                <i style="height:60%"></i>
-                <i style="height:48%"></i>
-                <i style="height:72%"></i>
-                <i style="height:64%"></i>
-                <i style="height:85%"></i>
-                <i style="height:76%"></i>
-                <i style="height:100%"></i>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- HEATMAP -->
-
-    <div class="heatmap-card">
-
-        <div>
-            <span class="section-label">APPLICATION ACTIVITY</span>
-            <h3>Last 12 Weeks</h3>
-        </div>
-
-        <div class="heatmap">
-
-            <!-- Row 1 -->
-            <span></span><span></span><span class="level1"></span>
-            <span class="level2"></span><span></span><span class="level3"></span>
-            <span class="level1"></span><span class="level4"></span>
-            <span></span><span class="level2"></span><span class="level3"></span>
-            <span></span><span class="level1"></span><span class="level4"></span>
-            <span class="level2"></span><span></span><span class="level3"></span>
-            <span></span><span class="level4"></span><span class="level2"></span>
-
-            <!-- Row 2 -->
-            <span class="level2"></span><span></span><span class="level3"></span>
-            <span class="level4"></span><span class="level1"></span><span></span>
-            <span class="level2"></span><span class="level3"></span><span></span>
-            <span class="level4"></span><span class="level1"></span><span class="level2"></span>
-            <span></span><span class="level3"></span><span class="level4"></span>
-            <span></span><span class="level1"></span><span class="level2"></span>
-            <span class="level4"></span><span></span><span class="level3"></span>
-            <span class="level1"></span>
-
-            <!-- Row 3 -->
-            <span></span><span class="level4"></span><span class="level2"></span>
-            <span class="level1"></span><span class="level3"></span><span></span>
-            <span class="level4"></span><span class="level2"></span><span class="level3"></span>
-            <span></span><span class="level1"></span><span class="level4"></span>
-            <span class="level2"></span><span></span><span class="level3"></span>
-            <span class="level4"></span><span class="level1"></span><span></span>
-            <span class="level2"></span><span class="level3"></span><span></span>
-            <span class="level4"></span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     CAREER MOMENTUM
-========================================================= -->
-
-<section class="section dark-section">
-
-    <div class="momentum">
-
-        <div class="momentum-content">
-
-            <span class="section-label">06 / CAREER MOMENTUM</span>
-
-            <h2>
-                Your momentum is
-                <span>accelerating.</span>
-            </h2>
-
-            <p>
-                Every application, interview and opportunity
-                moves you closer to your next career milestone.
-            </p>
-
-            <a href="#tracker" class="btn btn-primary">
-                View Career Journey →
-            </a>
-
-        </div>
-
-
-        <div class="career-roadmap">
-
-            <div class="road-line"></div>
-
-            <div class="road-step complete">
-                <span>✓</span>
-                <strong>Profile</strong>
-            </div>
-
-            <div class="road-step complete">
-                <span>✓</span>
-                <strong>Applications</strong>
-            </div>
-
-            <div class="road-step active">
-                <span>03</span>
-                <strong>Interviews</strong>
-            </div>
-
-            <div class="road-step">
-                <span>04</span>
-                <strong>Offers</strong>
-            </div>
-
-            <div class="road-step">
-                <span>05</span>
-                <strong>Career</strong>
             </div>
 
         </div>
@@ -1017,100 +376,1084 @@
      ABOUT
 ========================================================= -->
 
-<section id="about" class="section">
+<section id="about" class="section about-section">
 
-    <div class="about-grid">
+    <div class="container">
 
-        <div>
+        <div class="section-heading about-heading">
 
-            <span class="section-label">07 / ABOUT CAREERX</span>
+            <div>
+                <span class="section-label">01 / ABOUT CAREERX</span>
 
-            <h2>
-                Built For People
-                Who Take Their
-                <span>Career Seriously.</span>
-            </h2>
+                <h2>
+                    Stop Managing Your
+                    Career in
+                    <span class="gradient-text">Spreadsheets.</span>
+                </h2>
+            </div>
 
-            <p>
-                CAREERX is a modern career management platform
-                designed to help students, freshers and professionals
-                discover opportunities, organize applications and
-                make smarter career decisions.
-            </p>
+            <div>
+                <p>
+                    CAREERX brings jobs, internships, applications,
+                    opportunities and career insights together in one
+                    modern workspace built for ambitious people.
+                </p>
 
-            <a href="#login" class="btn btn-outline">
-                Join CAREERX →
-            </a>
+                <a href="#features" class="text-link">
+                    Discover the platform →
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-main glass-card">
+
+                <div class="about-icon">
+                    ✦
+                </div>
+
+                <span class="card-kicker">
+                    BUILT FOR AMBITION
+                </span>
+
+                <h3>
+                    Your career deserves
+                    a command center.
+                </h3>
+
+                <p>
+                    Whether you're a student searching for your first
+                    internship, a fresher looking for your first role,
+                    or a professional planning your next move,
+                    CAREERX keeps everything organized and visible.
+                </p>
+
+
+                <div class="about-metrics">
+
+                    <div>
+                        <strong>126</strong>
+                        <span>Applications tracked</span>
+                    </div>
+
+                    <div>
+                        <strong>38</strong>
+                        <span>Interview opportunities</span>
+                    </div>
+
+                    <div>
+                        <strong>04</strong>
+                        <span>Offers received</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="mission-card glass-card">
+
+                <div class="mission-grid"></div>
+
+                <span class="card-kicker">
+                    OUR MISSION
+                </span>
+
+                <h3>
+                    Make career management
+                    simple, organized
+                    and intelligent.
+                </h3>
+
+                <div class="mission-orb"></div>
+
+                <div class="mission-bottom">
+                    <span>CAREERX</span>
+                    <span>EST. 2026</span>
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="mission-card">
+        <div class="about-stats glass-card">
 
-            <span>OUR MISSION</span>
+            <div>
+                <strong>50K<span>+</span></strong>
+                <span>Opportunities</span>
+            </div>
 
-            <h3>
-                Make career management
-                simple, organized
-                and intelligent.
-            </h3>
+            <div>
+                <strong>10K<span>+</span></strong>
+                <span>Career Seekers</span>
+            </div>
 
-            <div class="mission-glow"></div>
+            <div>
+                <strong>25K<span>+</span></strong>
+                <span>Applications</span>
+            </div>
 
-        </div>
+            <div>
+                <strong>95<span>%</span></strong>
+                <span>Satisfaction</span>
+            </div>
 
-    </div>
-
-
-    <div class="about-stats">
-
-        <div>
-            <strong>50K+</strong>
-            <span>Opportunities</span>
-        </div>
-
-        <div>
-            <strong>10K+</strong>
-            <span>Users</span>
-        </div>
-
-        <div>
-            <strong>25K+</strong>
-            <span>Applications</span>
-        </div>
-
-        <div>
-            <strong>95%</strong>
-            <span>Satisfaction</span>
         </div>
 
     </div>
 
 </section>
 
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<section id="features" class="section features-section">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <span class="section-label">
+                02 / PLATFORM
+            </span>
+
+            <h2>
+                Everything Your
+                <span class="gradient-text">Career Needs.</span>
+            </h2>
+
+            <p>
+                One powerful workspace to discover opportunities,
+                organize your search and understand your career progress.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <article class="feature-card feature-large glass-card">
+
+                <span class="feature-number">01</span>
+
+                <div class="feature-icon cyan-icon">
+                    ◎
+                </div>
+
+                <div class="feature-content">
+                    <h3>Application Tracking</h3>
+
+                    <p>
+                        Keep every application organized from the
+                        first click to the final offer.
+                    </p>
+
+                    <a href="#jobs" class="feature-link">
+                        Start tracking →
+                    </a>
+                </div>
+
+                <div class="feature-decoration">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </article>
+
+
+            <article class="feature-card glass-card">
+
+                <span class="feature-number">02</span>
+
+                <div class="feature-icon violet-icon">
+                    ◈
+                </div>
+
+                <h3>Interview Timeline</h3>
+
+                <p>
+                    Keep every interview, stage and important
+                    career event visible.
+                </p>
+
+                <a href="#analytics" class="feature-link">
+                    Stay prepared →
+                </a>
+
+            </article>
+
+
+            <article class="feature-card glass-card">
+
+                <span class="feature-number">03</span>
+
+                <div class="feature-icon green-icon">
+                    ↗
+                </div>
+
+                <h3>Career Analytics</h3>
+
+                <p>
+                    Understand your application performance
+                    and identify where to improve.
+                </p>
+
+                <a href="#analytics" class="feature-link">
+                    View insights →
+                </a>
+
+            </article>
+
+
+            <article class="feature-card glass-card">
+
+                <span class="feature-number">04</span>
+
+                <div class="feature-icon orange-icon">
+                    ◷
+                </div>
+
+                <h3>Deadline Radar</h3>
+
+                <p>
+                    Never lose an opportunity because you
+                    missed an important deadline.
+                </p>
+
+                <a href="#jobs" class="feature-link">
+                    Stay ahead →
+                </a>
+
+            </article>
+
+
+            <article class="feature-card feature-large glass-card">
+
+                <span class="feature-number">05</span>
+
+                <div class="feature-icon purple-icon">
+                    ✦
+                </div>
+
+                <div class="feature-content">
+                    <h3>Career Insights</h3>
+
+                    <p>
+                        Discover patterns across your job search
+                        and make smarter decisions with meaningful
+                        career data.
+                    </p>
+
+                    <a href="#analytics" class="feature-link">
+                        Explore insights →
+                    </a>
+                </div>
+
+                <div class="insight-graph">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     JOBS
+========================================================= -->
+
+<section id="jobs" class="section jobs-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">
+                    03 / OPPORTUNITIES
+                </span>
+
+                <h2>
+                    Find Your Next
+                    <span class="gradient-text">Opportunity.</span>
+                </h2>
+
+                <p>
+                    Discover roles that match your skills,
+                    goals and career ambitions.
+                </p>
+            </div>
+
+            <a href="#" class="text-link">
+                View All Jobs →
+            </a>
+
+        </div>
+
+
+        <div class="search-panel glass-card">
+
+            <div class="search-box">
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    placeholder="Search jobs, roles or companies..."
+                    aria-label="Search jobs"
+                >
+            </div>
+
+            <button>
+                Location
+                <span>⌄</span>
+            </button>
+
+            <button>
+                Experience
+                <span>⌄</span>
+            </button>
+
+            <button>
+                Work Mode
+                <span>⌄</span>
+            </button>
+
+            <button class="search-submit">
+                Search
+            </button>
+
+        </div>
+
+
+        <div class="chips">
+
+            <button class="chip active">
+                All Jobs
+            </button>
+
+            <button class="chip">
+                Remote
+            </button>
+
+            <button class="chip">
+                Hybrid
+            </button>
+
+            <button class="chip">
+                Full-time
+            </button>
+
+            <button class="chip">
+                Freshers
+            </button>
+
+            <button class="chip">
+                Software
+            </button>
+
+            <button class="chip">
+                Java
+            </button>
+
+            <button class="chip">
+                Python
+            </button>
+
+        </div>
+
+
+        <div class="job-grid">
+
+            <!-- JOB 1 -->
+
+            <article class="job-card glass-card">
+
+                <div class="job-top">
+
+                    <div class="company-logo google">
+                        G
+                    </div>
+
+                    <button class="save" aria-label="Save job">
+                        ♡
+                    </button>
+
+                </div>
+
+                <span class="job-type">
+                    FULL-TIME
+                </span>
+
+                <h3>
+                    Software Engineer
+                </h3>
+
+                <p class="company-name">
+                    Google
+                </p>
+
+                <div class="job-meta">
+                    <span>⌖ Bangalore</span>
+                    <span>◈ Hybrid</span>
+                </div>
+
+                <div class="salary">
+                    ₹8–14 LPA
+                </div>
+
+                <div class="job-bottom">
+                    <small>Posted 2 days ago</small>
+
+                    <a href="#">
+                        View Job →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <!-- JOB 2 -->
+
+            <article class="job-card glass-card">
+
+                <div class="job-top">
+
+                    <div class="company-logo microsoft">
+                        M
+                    </div>
+
+                    <button class="save" aria-label="Save job">
+                        ♡
+                    </button>
+
+                </div>
+
+                <span class="job-type purple-text">
+                    FULL-TIME
+                </span>
+
+                <h3>
+                    Frontend Developer
+                </h3>
+
+                <p class="company-name">
+                    Microsoft
+                </p>
+
+                <div class="job-meta">
+                    <span>⌖ Hyderabad</span>
+                    <span>◈ Remote</span>
+                </div>
+
+                <div class="salary">
+                    ₹10–18 LPA
+                </div>
+
+                <div class="job-bottom">
+                    <small>Posted 1 day ago</small>
+
+                    <a href="#">
+                        View Job →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <!-- JOB 3 -->
+
+            <article class="job-card glass-card">
+
+                <div class="job-top">
+
+                    <div class="company-logo zoho">
+                        Z
+                    </div>
+
+                    <button class="save" aria-label="Save job">
+                        ♡
+                    </button>
+
+                </div>
+
+                <span class="job-type green-text">
+                    FULL-TIME
+                </span>
+
+                <h3>
+                    Java Developer
+                </h3>
+
+                <p class="company-name">
+                    Zoho
+                </p>
+
+                <div class="job-meta">
+                    <span>⌖ Chennai</span>
+                    <span>◈ On-site</span>
+                </div>
+
+                <div class="salary">
+                    ₹5–9 LPA
+                </div>
+
+                <div class="job-bottom">
+                    <small>Posted 3 days ago</small>
+
+                    <a href="#">
+                        View Job →
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTERNSHIPS
+========================================================= -->
+
+<section id="internships" class="section internship-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">
+                    04 / INTERNSHIPS
+                </span>
+
+                <h2>
+                    Launch Your Career
+                    <span class="gradient-text">
+                        With Experience.
+                    </span>
+                </h2>
+
+                <p>
+                    Discover internships that turn learning
+                    into real-world experience.
+                </p>
+            </div>
+
+            <a href="#" class="text-link">
+                Explore Internships →
+            </a>
+
+        </div>
+
+
+        <div class="internship-grid">
+
+            <!-- INTERNSHIP 1 -->
+
+            <article class="internship-card featured glass-card">
+
+                <div class="internship-top">
+
+                    <span class="internship-number">
+                        01
+                    </span>
+
+                    <span class="featured-badge">
+                        FEATURED
+                    </span>
+
+                </div>
+
+                <div class="company-logo tn-logo">
+                    TN
+                </div>
+
+                <span class="internship-meta">
+                    6 MONTHS · HYBRID
+                </span>
+
+                <h3>
+                    Java Full Stack Intern
+                </h3>
+
+                <p>
+                    TechNova Solutions
+                </p>
+
+                <div class="skills">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>MySQL</span>
+                </div>
+
+                <div class="internship-footer">
+                    <strong>
+                        ₹15K
+                        <small>/ Month</small>
+                    </strong>
+
+                    <a href="#">
+                        Apply Now →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <!-- INTERNSHIP 2 -->
+
+            <article class="internship-card glass-card">
+
+                <div class="internship-top">
+
+                    <span class="internship-number">
+                        02
+                    </span>
+
+                </div>
+
+                <div class="company-logo ai-logo">
+                    AI
+                </div>
+
+                <span class="internship-meta">
+                    3 MONTHS · REMOTE
+                </span>
+
+                <h3>
+                    AI / ML Intern
+                </h3>
+
+                <p>
+                    DataMind Labs
+                </p>
+
+                <div class="skills">
+                    <span>Python</span>
+                    <span>Machine Learning</span>
+                    <span>SQL</span>
+                </div>
+
+                <div class="internship-footer">
+                    <strong>
+                        ₹20K
+                        <small>/ Month</small>
+                    </strong>
+
+                    <a href="#">
+                        Apply Now →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <!-- INTERNSHIP 3 -->
+
+            <article class="internship-card glass-card">
+
+                <div class="internship-top">
+
+                    <span class="internship-number">
+                        03
+                    </span>
+
+                </div>
+
+                <div class="company-logo fx-logo">
+                    FX
+                </div>
+
+                <span class="internship-meta">
+                    6 MONTHS · ON-SITE
+                </span>
+
+                <h3>
+                    Frontend Developer Intern
+                </h3>
+
+                <p>
+                    FutureX Technologies
+                </p>
+
+                <div class="skills">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="internship-footer">
+                    <strong>
+                        ₹12K
+                        <small>/ Month</small>
+                    </strong>
+
+                    <a href="#">
+                        Apply Now →
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ANALYTICS
+========================================================= -->
+
+<section id="analytics" class="section analytics-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">
+                    05 / ANALYTICS
+                </span>
+
+                <h2>
+                    Understand Your
+                    <span class="gradient-text">
+                        Career Performance.
+                    </span>
+                </h2>
+
+                <p>
+                    Your career search is data.
+                    Use it to make smarter decisions.
+                </p>
+            </div>
+
+            <div class="career-score">
+
+                <span>CAREER SCORE</span>
+
+                <strong>
+                    87
+                    <small>/100</small>
+                </strong>
+
+                <em>Excellent momentum</em>
+
+            </div>
+
+        </div>
+
+
+        <div class="analytics-grid">
+
+            <!-- SUCCESS -->
+
+            <div class="analytics-card glass-card">
+
+                <div class="analytics-card-top">
+                    <span>APPLICATION SUCCESS</span>
+
+                    <span class="trend">
+                        ↑ 12.4%
+                    </span>
+                </div>
+
+                <strong>
+                    68<span>%</span>
+                </strong>
+
+                <div class="progress-large">
+                    <span style="width:68%"></span>
+                </div>
+
+                <small>
+                    Compared to last month
+                </small>
+
+            </div>
+
+
+            <!-- INTERVIEW -->
+
+            <div class="analytics-card glass-card">
+
+                <div class="analytics-card-top">
+                    <span>INTERVIEW RATE</span>
+
+                    <span class="trend purple-trend">
+                        ↑ 8.2%
+                    </span>
+                </div>
+
+                <strong>
+                    32<span>%</span>
+                </strong>
+
+                <div class="progress-large purple">
+                    <span style="width:32%"></span>
+                </div>
+
+                <small>
+                    Compared to last month
+                </small>
+
+            </div>
+
+
+            <!-- OFFER -->
+
+            <div class="analytics-card glass-card">
+
+                <div class="analytics-card-top">
+                    <span>OFFER RATE</span>
+
+                    <span class="trend green-trend">
+                        ↑ 4.8%
+                    </span>
+                </div>
+
+                <strong>
+                    12<span>%</span>
+                </strong>
+
+                <div class="progress-large green">
+                    <span style="width:12%"></span>
+                </div>
+
+                <small>
+                    Compared to last month
+                </small>
+
+            </div>
+
+
+            <!-- CHART -->
+
+            <div class="analytics-card chart-card glass-card">
+
+                <div class="chart-title">
+
+                    <div>
+                        <span>MONTHLY APPLICATIONS</span>
+
+                        <strong>
+                            +24.8%
+                        </strong>
+                    </div>
+
+                    <small>
+                        Last 10 months
+                    </small>
+
+                </div>
+
+                <div class="large-bars">
+
+                    <i style="height:30%"></i>
+                    <i style="height:42%"></i>
+                    <i style="height:35%"></i>
+                    <i style="height:60%"></i>
+                    <i style="height:48%"></i>
+                    <i style="height:72%"></i>
+                    <i style="height:64%"></i>
+                    <i style="height:85%"></i>
+                    <i style="height:76%"></i>
+                    <i style="height:100%"></i>
+
+                </div>
+
+                <div class="chart-labels">
+                    <span>Jan</span>
+                    <span>Feb</span>
+                    <span>Mar</span>
+                    <span>Apr</span>
+                    <span>May</span>
+                    <span>Jun</span>
+                    <span>Jul</span>
+                    <span>Aug</span>
+                    <span>Sep</span>
+                    <span>Oct</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HEATMAP -->
+
+        <div class="heatmap-card glass-card">
+
+            <div class="heatmap-heading">
+
+                <div>
+                    <span class="section-label">
+                        APPLICATION ACTIVITY
+                    </span>
+
+                    <h3>
+                        Your last 12 weeks
+                    </h3>
+                </div>
+
+                <div class="heatmap-legend">
+                    <span>Less</span>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <span>More</span>
+                </div>
+
+            </div>
+
+
+            <div class="heatmap">
+
+                <span></span>
+                <span></span>
+                <span class="level1"></span>
+                <span class="level2"></span>
+                <span></span>
+                <span class="level3"></span>
+                <span class="level1"></span>
+                <span class="level4"></span>
+                <span></span>
+                <span class="level2"></span>
+                <span class="level3"></span>
+                <span></span>
+
+                <span class="level1"></span>
+                <span class="level2"></span>
+                <span></span>
+                <span class="level3"></span>
+                <span class="level4"></span>
+                <span class="level1"></span>
+                <span></span>
+                <span class="level2"></span>
+                <span class="level3"></span>
+                <span></span>
+                <span class="level4"></span>
+                <span class="level1"></span>
+
+                <span></span>
+                <span class="level4"></span>
+                <span class="level2"></span>
+                <span class="level1"></span>
+                <span class="level3"></span>
+                <span></span>
+                <span class="level4"></span>
+                <span class="level2"></span>
+                <span class="level3"></span>
+                <span></span>
+                <span class="level1"></span>
+                <span class="level4"></span>
+
+                <span class="level2"></span>
+                <span></span>
+                <span class="level3"></span>
+                <span class="level4"></span>
+                <span class="level1"></span>
+                <span></span>
+                <span class="level2"></span>
+                <span class="level3"></span>
+                <span></span>
+                <span class="level4"></span>
+                <span class="level1"></span>
+                <span class="level2"></span>
+
+                <span></span>
+                <span class="level3"></span>
+                <span class="level4"></span>
+                <span></span>
+                <span class="level1"></span>
+                <span class="level2"></span>
+                <span class="level4"></span>
+                <span></span>
+                <span class="level3"></span>
+                <span class="level1"></span>
+                <span></span>
+                <span class="level4"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- =========================================================
      CTA
 ========================================================= -->
 
-<section class="cta section">
+<section class="cta-section section">
 
-    <div class="cta-glow"></div>
+    <div class="container">
 
-    <span class="section-label">YOUR NEXT MOVE</span>
+        <div class="cta glass-card">
 
-    <h2>
-        Your Next Opportunity
-        Is Already <span>Waiting.</span>
-    </h2>
+            <div class="cta-grid"></div>
 
-    <p>
-        Stop losing opportunities in spreadsheets
-        and scattered notes.
-    </p>
+            <div class="cta-glow"></div>
 
-    <a href="#tracker" class="btn btn-primary">
-        Build My Career Tracker →
-    </a>
+            <div class="cta-content">
+
+                <span class="section-label">
+                    YOUR NEXT MOVE
+                </span>
+
+                <h2>
+                    Your next opportunity
+                    is already
+                    <span>waiting.</span>
+                </h2>
+
+                <p>
+                    Stop losing opportunities in spreadsheets
+                    and scattered notes. Build a smarter career journey.
+                </p>
+
+                <div class="cta-buttons">
+
+                    <a href="#jobs" class="btn btn-primary btn-large">
+                        Start Exploring
+                        <span>→</span>
+                    </a>
+
+                    <a href="#about" class="btn btn-glass btn-large">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -1123,80 +1466,130 @@
 
 <footer>
 
-    <div class="footer-main">
+    <div class="container">
 
-        <div class="footer-brand">
+        <div class="footer-main">
 
-            <a href="#home" class="logo">
+            <div class="footer-brand">
 
-                <span class="logo-mark">
-                    <span></span>
-                </span>
+                <a href="#home" class="logo">
 
-                <div>
-                    <strong>CAREER<span>X</span></strong>
-                    <small>CAREER COMMAND CENTER</small>
+                    <span class="logo-mark">
+                        <span></span>
+                    </span>
+
+                    <span class="logo-text">
+                        <strong>CAREER<span>X</span></strong>
+                        <small>CAREER COMMAND CENTER</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Your modern career command center for
+                    jobs, internships and opportunities.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="LinkedIn">
+                        in
+                    </a>
+
+                    <a href="#" aria-label="GitHub">
+                        GH
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        IG
+                    </a>
+
+                    <a href="#" aria-label="X">
+                        X
+                    </a>
+
                 </div>
 
-            </a>
-
-            <p>
-                Your career command center for
-                jobs, internships and opportunities.
-            </p>
-
-        </div>
+            </div>
 
 
-        <div class="footer-column">
+            <div class="footer-column">
 
-            <h4>PRODUCT</h4>
+                <h4>PRODUCT</h4>
 
-            <a href="#jobs">Jobs</a>
-            <a href="#internships">Internships</a>
-            <a href="#tracker">Tracker</a>
-            <a href="#analytics">Analytics</a>
+                <a href="#jobs">Jobs</a>
+                <a href="#internships">Internships</a>
+                <a href="#features">Features</a>
+                <a href="#analytics">Analytics</a>
 
-        </div>
-
-
-        <div class="footer-column">
-
-            <h4>COMPANY</h4>
-
-            <a href="#about">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-
-        </div>
+            </div>
 
 
-        <div class="footer-column">
+            <div class="footer-column">
 
-            <h4>CONNECT</h4>
+                <h4>COMPANY</h4>
 
-            <a href="#">LinkedIn ↗</a>
-            <a href="#">GitHub ↗</a>
-            <a href="#">Instagram ↗</a>
-            <a href="#">X ↗</a>
+                <a href="#about">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>RESOURCES</h4>
+
+                <a href="#">Career Guide</a>
+                <a href="#">Resume Tips</a>
+                <a href="#">Interview Prep</a>
+                <a href="#">Career Blog</a>
+
+            </div>
 
         </div>
 
-    </div>
 
+        <div class="footer-bottom">
 
-    <div class="footer-bottom">
+            <span>
+                © 2026 CAREERX. All rights reserved.
+            </span>
 
-        <span>© 2026 CAREERX. All rights reserved.</span>
+            <span>
+                Designed for ambitious careers.
+            </span>
 
-        <span>
-            Designed for ambitious careers.
-        </span>
+        </div>
 
     </div>
 
 </footer>
+
+
+<!-- =========================================================
+     SMALL JS FOR MOBILE NAV
+========================================================= -->
+
+<script>
+    const menuButton = document.querySelector(".mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (menuButton && navLinks) {
+        menuButton.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+            menuButton.classList.toggle("active");
+        });
+
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+                menuButton.classList.remove("active");
+            });
+        });
+    }
+</script>
 
 </body>
 </html>
